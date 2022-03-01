@@ -50,7 +50,7 @@ class Login(View):
         user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/')
+            return redirect('main')
         else:
             return redirect('/register')
 

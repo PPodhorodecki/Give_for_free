@@ -1,120 +1,110 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block body1 %}
-    <header class="header--main-page">
-      <nav class="container container--70">
-        <ul class="nav--actions">
-          <li><a href="/login" class="btn btn--small btn--without-border">Zaloguj</a></li>
-          <li><a href="/register" class="btn btn--small btn--highlighted">Załóż konto</a></li>
-        </ul>
-
-        <ul>
-          <li><a href="" class="btn btn--without-border active">Start</a></li>
-          <li><a href="#steps" class="btn btn--without-border">O co chodzi?</a></li>
-          <li><a href="#about-us" class="btn btn--without-border">O nas</a></li>
-          <li><a href="#help" class="btn btn--without-border">Fundacje i organizacje</a></li>
-          <li><a href="/add" class="btn btn--without-border">Przekaż dary</a></li>
-          <li><a href="#contact" class="btn btn--without-border">Kontakt</a></li>
-        </ul>
-      </nav>
-
-      <div class="slogan container container--90">
-        <div class="slogan--item">
-          <h1>
-            Zacznij pomagać!<br />
+{% block nav1 %}
+<li><a href="form.html" class="btn btn--without-border">Przekaż dary</a></li>
+{% endblock %}
+{% block header1 %}
+<div class="slogan container container--90">
+    <div class="slogan--item">
+        <h1>
+            Zacznij pomagać!<br/>
             Oddaj niechciane rzeczy w zaufane ręce
-          </h1>
-        </div>
-      </div>
-    </header>
-
-    <section id="stats" class="stats">
-      <div class="container container--85">
+        </h1>
+    </div>
+</div>
+{% endblock %}
+{% block body1 %}
+<section id="stats" class="stats">
+    <div class="container container--85">
         <div class="stats--item">
-          <em>{{ bags }}</em>
-          <h3>Oddanych worków</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum tempora!</p>
+            <em>{{ bags }}</em>
+            <h3>Oddanych worków</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
+                tempora!</p>
         </div>
 
         <div class="stats--item">
-          <em>{{ ins_val }}</em>
-          <h3>Wspartych organizacji</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas quam.</p>
+            <em>{{ ins_val }}</em>
+            <h3>Wspartych organizacji</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
+                quam.</p>
         </div>
 
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section id="steps" class="steps">
-      <h2>Wystarczą 4 proste kroki</h2>
+<section id="steps" class="steps">
+    <h2>Wystarczą 4 proste kroki</h2>
 
-      <div class="steps--container">
+    <div class="steps--container">
         <div class="steps--item">
-          <span class="icon icon--hands"></span>
-          <h3>Wybierz rzeczy</h3>
-          <p>ubrania, zabawki, sprzęt i inne</p>
-        </div>
-        <div class="steps--item">
-          <span class="icon icon--arrow"></span>
-          <h3>Spakuj je</h3>
-          <p>skorzystaj z worków na śmieci</p>
+            <span class="icon icon--hands"></span>
+            <h3>Wybierz rzeczy</h3>
+            <p>ubrania, zabawki, sprzęt i inne</p>
         </div>
         <div class="steps--item">
-          <span class="icon icon--glasses"></span>
-          <h3>Zdecyduj komu chcesz pomóc</h3>
-          <p>wybierz zaufane miejsce</p>
+            <span class="icon icon--arrow"></span>
+            <h3>Spakuj je</h3>
+            <p>skorzystaj z worków na śmieci</p>
         </div>
         <div class="steps--item">
-          <span class="icon icon--courier"></span>
-          <h3>Zamów kuriera</h3>
-          <p>kurier przyjedzie w dogodnym terminie</p>
+            <span class="icon icon--glasses"></span>
+            <h3>Zdecyduj komu chcesz pomóc</h3>
+            <p>wybierz zaufane miejsce</p>
         </div>
-      </div>
+        <div class="steps--item">
+            <span class="icon icon--courier"></span>
+            <h3>Zamów kuriera</h3>
+            <p>kurier przyjedzie w dogodnym terminie</p>
+        </div>
+    </div>
 
-      <a href="/register" class="btn btn--large">Załóż konto</a>
-    </section>
+    <a href="/register" class="btn btn--large">Załóż konto</a>
+</section>
 
-    <section id="about-us" class="about-us">
-      <div class="about-us--text">
+<section id="about-us" class="about-us">
+    <div class="about-us--text">
         <h2>O nas</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas vitae animi rem pariatur incidunt libero optio esse quisquam illo omnis.</p>
-        <img src="{% static 'images/signature.svg' %}" class="about-us--text-signature" alt="Signature" />
-      </div>
-      <div class="about-us--image"><img src="{% static 'images/about-us.jpg' %}" alt="People in circle" /></div>
-    </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas vitae animi rem pariatur incidunt libero
+            optio esse quisquam illo omnis.</p>
+        <img src="{% static 'images/signature.svg' %}" class="about-us--text-signature" alt="Signature"/>
+    </div>
+    <div class="about-us--image"><img src="{% static 'images/about-us.jpg' %}" alt="People in circle"/></div>
+</section>
 
-     <section id="help" class="help">
-      <h2>Komu pomagamy?</h2>
+<section id="help" class="help">
+    <h2>Komu pomagamy?</h2>
 
-      <ul class="help--buttons">
+    <ul class="help--buttons">
         <li data-id="1"><a href="#" class="btn btn--without-border active">Fundacjom</a></li>
         <li data-id="2"><a href="#" class="btn btn--without-border">Organizacjom pozarządowym</a></li>
         <li data-id="3"><a href="#" class="btn btn--without-border">Lokalnym zbiórkom</a></li>
-      </ul>
+    </ul>
 
-      <!-- SLIDE 1 -->
-      <div class="help--slides active" data-id="1">
-        <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+    <!-- SLIDE 1 -->
+    <div class="help--slides active" data-id="1">
+        <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się
+            zajmują, komu pomagają i czego potrzebują.</p>
 
         <ul class="help--slides-items">
-          {% for f in institutions_f %}
+            {% for f in institutions_f %}
             <li>
-              <div class="col">
-                <div class="title">Fundacja "{{ f.name }} "</div>
-                <div class="subtitle">Cel i misja: {{ f.description }}</div>
-              </div>
-
-              <div class="col">
-                <div class="text">
-                {% for cat in f.categories.all %}
-                  {{ cat.name }},
-                {% endfor %}
-
+                <div class="col">
+                    <div class="title">Fundacja "{{ f.name }} "</div>
+                    <div class="subtitle">Cel i misja: {{ f.description }}</div>
                 </div>
-              </div>
+
+                <div class="col">
+                    <div class="text">
+                        {% for cat in f.categories.all %}
+                        {{ cat.name }},
+                        {% endfor %}
+
+                    </div>
+                </div>
             </li>
-          {% endfor %}
+            {% endfor %}
         </ul>
         <!-- Pagination
         <ul class="help--slides-pagination">
@@ -124,41 +114,42 @@
         </ul>
         -->
         {% if institutions_f.has_previous %}
-          <a href="page={{ institutions_f.previous_page_number }}#help" class="btn btn--small btn--without-border active">Poprzednia</a>
+        <a href="page={{ institutions_f.previous_page_number }}#help" class="btn btn--small btn--without-border active">Poprzednia</a>
         {% else %}
-          <span class="btn btn--small btn--without-border active">Poprzednia</span>
+        <span class="btn btn--small btn--without-border active">Poprzednia</span>
         {% endif %}
 
         <span> Strona {{ institutions_f.number }} z {{ institutions_f.paginator.num_pages }}</span>
 
         {% if institutions_f.has_next %}
-          <a href="page={{ institutions_f.next_page_number }}#help" class="btn btn--small btn--without-border active">Następna</a>
+        <a href="page={{ institutions_f.next_page_number }}#help" class="btn btn--small btn--without-border active">Następna</a>
         {% else %}
-          <span class="btn btn--small btn--without-border active">Następna</span>
+        <span class="btn btn--small btn--without-border active">Następna</span>
         {% endif %}
-      </div>
+    </div>
 
 
-      <!-- SLIDE 2 -->
-      <div class="help--slides" data-id="2">
-        <p>W naszej bazie znajdziesz listę zweryfikowanych organizacji pozarządowych, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+    <!-- SLIDE 2 -->
+    <div class="help--slides" data-id="2">
+        <p>W naszej bazie znajdziesz listę zweryfikowanych organizacji pozarządowych, z którymi współpracujemy. Możesz
+            sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
         <ul class="help--slides-items">
-          {% for o in institutions_o %}
+            {% for o in institutions_o %}
             <li>
-              <div class="col">
-                <div class="title">Organizacja pozarządowa "{{ o.name }} "</div>
-                <div class="subtitle">Cel i misja: {{ o.description }}</div>
-              </div>
-
-              <div class="col">
-                <div class="text">
-                  {% for cat in o.categories.all %}
-                    {{ cat.name }},
-                  {% endfor %}
+                <div class="col">
+                    <div class="title">Organizacja pozarządowa "{{ o.name }} "</div>
+                    <div class="subtitle">Cel i misja: {{ o.description }}</div>
                 </div>
-              </div>
+
+                <div class="col">
+                    <div class="text">
+                        {% for cat in o.categories.all %}
+                        {{ cat.name }},
+                        {% endfor %}
+                    </div>
+                </div>
             </li>
-          {% endfor %}
+            {% endfor %}
         </ul>
 
         <!-- Pagination
@@ -171,40 +162,41 @@
         </ul>
         -->
         {% if institutions_o.has_previous %}
-          <a href="page={{ institutions_o.previous_page_number }}#help" class="btn btn--small btn--without-border active">Poprzednia</a>
+        <a href="page={{ institutions_o.previous_page_number }}#help" class="btn btn--small btn--without-border active">Poprzednia</a>
         {% else %}
-          <span class="btn btn--small btn--without-border active">Poprzednia</span>
+        <span class="btn btn--small btn--without-border active">Poprzednia</span>
         {% endif %}
 
         <span> Strona {{ institutions_o.number }} z {{ institutions_o.paginator.num_pages }}</span>
 
         {% if institutions_o.has_next %}
-          <a href="page={{ institutions_o.next_page_number }}#help" class="btn btn--small btn--without-border active">Następna</a>
+        <a href="page={{ institutions_o.next_page_number }}#help" class="btn btn--small btn--without-border active">Następna</a>
         {% else %}
-          <span class="btn btn--small btn--without-border active">Następna</span>
+        <span class="btn btn--small btn--without-border active">Następna</span>
         {% endif %}
-      </div>
+    </div>
 
-      <!-- SLIDE 3 -->
-      <div class="help--slides" data-id="3">
-        <p>W naszej bazie znajdziesz listę zweryfikowanych zbiórek lokalnych, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+    <!-- SLIDE 3 -->
+    <div class="help--slides" data-id="3">
+        <p>W naszej bazie znajdziesz listę zweryfikowanych zbiórek lokalnych, z którymi współpracujemy. Możesz sprawdzić
+            czym się zajmują, komu pomagają i czego potrzebują.</p>
         <ul class="help--slides-items">
-          {% for l in institutions_l %}
+            {% for l in institutions_l %}
             <li>
-              <div class="col">
-                <div class="title">Zbiórka lokalna "{{ l.name }} "</div>
-                <div class="subtitle">Cel i misja: {{ l.description }}</div>
-              </div>
-
-              <div class="col">
-                <div class="text">
-                  {% for cat in l.categories.all %}
-                    {{ cat.name }},
-                  {% endfor %}
+                <div class="col">
+                    <div class="title">Zbiórka lokalna "{{ l.name }} "</div>
+                    <div class="subtitle">Cel i misja: {{ l.description }}</div>
                 </div>
-              </div>
+
+                <div class="col">
+                    <div class="text">
+                        {% for cat in l.categories.all %}
+                        {{ cat.name }},
+                        {% endfor %}
+                    </div>
+                </div>
             </li>
-          {% endfor %}
+            {% endfor %}
         </ul>
 
         <!-- Pagination
@@ -214,19 +206,19 @@
         </ul>
         -->
         {% if institutions_l.has_previous %}
-          <a href="page={{ institutions_l.previous_page_number }}#help" class="btn btn--small btn--without-border active">Poprzednia</a>
+        <a href="page={{ institutions_l.previous_page_number }}#help" class="btn btn--small btn--without-border active">Poprzednia</a>
         {% else %}
-          <span class="btn btn--small btn--without-border active">Poprzednia</span>
+        <span class="btn btn--small btn--without-border active">Poprzednia</span>
         {% endif %}
 
         <span> Strona {{ institutions_l.number }} z {{ institutions_l.paginator.num_pages }}</span>
 
         {% if institutions_l.has_next %}
-          <a href="page={{ institutions_l.next_page_number }}#help" class="btn btn--small btn--without-border active">Następna</a>
+        <a href="page={{ institutions_l.next_page_number }}#help" class="btn btn--small btn--without-border active">Następna</a>
         {% else %}
-          <span class="btn btn--small btn--without-border active">Następna</span>
+        <span class="btn btn--small btn--without-border active">Następna</span>
         {% endif %}
-      </div>
-    </section>
-    <script src="{% static 'js/app.js' %}"></script>
+    </div>
+</section>
+<script src="{% static 'js/app.js' %}"></script>
 {% endblock %}
