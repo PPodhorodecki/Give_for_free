@@ -60,7 +60,9 @@
         </div>
     </div>
 
+    {% if request.user.is_authenticated == False %}
     <a href="/register" class="btn btn--large">Załóż konto</a>
+    {% endif %}
 </section>
 
 <section id="about-us" class="about-us">

@@ -55,6 +55,12 @@ class Login(View):
             return redirect('/register')
 
 
+class Logout(View):
+    def get(self, request):
+        logout(request)
+        return redirect('main')
+
+
 class Register(View):
     def get(self, request):
         return render(request, 'register.html')
