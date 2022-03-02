@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block nav1 %}
-<li><a href="form.html" class="btn btn--without-border">Przekaż dary</a></li>
+{% if request.user.is_authenticated == True %}
+<li><a href="/add" class="btn btn--without-border">Przekaż dary</a></li>
+{% else %}
+<li><a href="/login" class="btn btn--without-border">Przekaż dary</a></li>
+{% endif %}
 {% endblock %}
 {% block header1 %}
 <div class="slogan container container--90">
