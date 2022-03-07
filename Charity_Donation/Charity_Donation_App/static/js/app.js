@@ -253,3 +253,15 @@ document.addEventListener("DOMContentLoaded", function() {
     new FormSteps(form);
   }
 });
+
+//let category = document.querySelectorAll('categories')
+//let institution = document.querySelectorAll('organization')
+//institution.style.display = 'none'
+//
+//category.addEventListener('click', function(event){
+//    for (let i=0; i<category.length; i++) {
+//        if (category[i].checked==true) {
+//
+//        }
+//    }
+//})

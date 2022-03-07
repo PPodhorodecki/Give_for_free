@@ -38,8 +38,10 @@ class LandingPage(View):
 class AddDonation(View):
     def get(self, request):
         categories = Category.objects.all()
+        institutions = Institution.objects.all()
         ctx = {}
         ctx['categories'] = categories
+        ctx['institutions'] = institutions
         return render(request, 'form.html', context=ctx)
 
 
