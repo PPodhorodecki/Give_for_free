@@ -85,3 +85,8 @@ class Register(View):
         user.save()
         return redirect('/login')
 
+
+class UserData(View):
+    def get(self, request):
+        user = request.user
+        return render(request, 'user.html', context={'user': user})
