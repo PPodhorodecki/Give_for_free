@@ -19,6 +19,9 @@
             <li class="logged-user">
                 Witaj {{ user.first_name }} !
                 <ul class="dropdown">
+                    {% if request.user.is_superuser == True %}
+                    <li><a href="/admin">Panel administracyjny</a></li>
+                    {% endif %}
                     <li><a href="#">Profil</a></li>
                     <li><a href="#">Ustawienia</a></li>
                     <li><a href="/logout">Wyloguj</a></li>

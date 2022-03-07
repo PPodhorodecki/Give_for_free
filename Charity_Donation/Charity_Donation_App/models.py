@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     name = models.CharField(max_length=64)
+    def __str__(self):
+        return self.name
 
 institution_types = ((1, "Fundacja"), (2, "Organizacja pozarządowa"), (3, "Zbiórka lokalna"))
 
@@ -11,6 +13,8 @@ class Institution(models.Model):
     description = models.TextField()
     type = models.IntegerField(choices=institution_types, default=1)
     categories = models.ManyToManyField(Category)
+    def __str__(self):
+        return self.name
 
 class Donation(models.Model):
     quantity = models.IntegerField()
@@ -24,3 +28,5 @@ class Donation(models.Model):
     pick_up_time = models.TimeField()
     pick_up_comment = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
